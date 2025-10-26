@@ -1,5 +1,5 @@
 import express from "express";
-import resturantsRouter from "./routes/restraurants";
+import resturantsRouter from "./routes/restaurants.ts";
 import cuisinesRouter from "./routes/cuisines";
 import { errorHandler } from "./middleware/errorHandler.ts";
 
@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
-app.use("/restraurants", resturantsRouter);
+app.use("/restaurants", resturantsRouter);
 app.use("/cuisines", cuisinesRouter);
 
 app.use(errorHandler);
